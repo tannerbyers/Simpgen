@@ -19,7 +19,6 @@
   "homepage": "https://github.com/tannerbyers/Simpgen#readme",
   "dependencies": {
     "front-matter": "^4.0.2",
-    "fs": "0.0.1-security",
     "highlight.js": "^10.4.0",
     "marked": "^1.2.5"
   }
