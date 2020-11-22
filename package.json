@@ -1,0 +1,26 @@
+{
+  "name": "simpgen",
+  "version": "1.0.0",
+  "description": "Personal Static Site Generator",
+  "main": "./scripts/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./scripts/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tannerbyers/Simpgen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tannerbyers/Simpgen/issues"
+  },
+  "homepage": "https://github.com/tannerbyers/Simpgen#readme",
+  "dependencies": {
+    "front-matter": "^4.0.2",
+    "fs": "0.0.1-security",
+    "highlight.js": "^10.4.0",
+    "marked": "^1.2.5"
+  }
+}
