@@ -1,9 +1,9 @@
 const config = {
   blogName: "Blog",
-  blogDescription: "Sharing what I learn as a web developer & designer",
+  blogDescription: "Sharing what I learn as a web developer & problem solver",
   authorName: "Tanner Byers",
   authorDescription:
-    "a web developer and designer making lot's of stuff in Dubai",
+    "A Developer and Healthcare EDI Specialist",
   dev: {
     postsdir: "./content/posts",
     outdir: "./public"
