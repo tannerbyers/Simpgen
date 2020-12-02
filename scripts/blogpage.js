@@ -83,7 +83,7 @@ body {
 const addBlogPage = (posts) => {
   fs.writeFile(`${config.dev.outdir}/blog.html`, blog(posts), (e) => {
     if (e) throw e;
-    console.log(`blogpage.html was created successfully`);
+    console.log(`blog.html was created successfully`);
   });
 };
 
