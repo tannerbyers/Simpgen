@@ -20,5 +20,5 @@ Opinions:
  
 To Do
 --- 
+ * Fix HighlightJs in marked.js. Codeblocks are shown but no highlighting css. 
  * Add CSS for website
- * Add Project Section
