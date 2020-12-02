@@ -1,6 +1,6 @@
 ---
-title: Post 
-date: 2020-11-21
+title: Post One
+date: 2020-12-01
 description: My reasons for starting a blog.
 ---
 

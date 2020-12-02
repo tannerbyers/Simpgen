@@ -64,15 +64,14 @@ body {
 
     <div class="posts">
     ${posts
-    .map(
-      post => `<div class="post">
-        <h3><a href="./${post.path}">${post.attributes.title
-        }</a></h3>
-            <small>${(post.attributes.date).toDateString()}</small>
+      .map(
+        (post) => `<div class="post">
+        <h3><a href="./${post.path}">${post.attributes.title}</a></h3>
+            <small>${post.attributes.date.toDateString()}</small>
             <p>${post.attributes.description}</p>
         </div>`
-    )
-    .join("")}
+      )
+      .join("")}
 </div>
 
 <div style="position: absolute; bottom: 1rem; width: 100%; height: 2.5rem; text-align: center; font-family: Merriweather,Georgia,serif;">
