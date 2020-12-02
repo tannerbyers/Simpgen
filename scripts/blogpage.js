@@ -1,4 +1,7 @@
+const fs = require("fs");
+const config = require("./config");
 
+const blog = (posts) => `
 <!DOCTYPE html>
 <html style="font-family: Lato,Helvetica,sans-serif; font-weight: 400">
     <head>
@@ -39,8 +42,8 @@ body {
 </style>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Sharing what I learn as a web developer & problem solver" />
-<title>Blog</title>
+<meta name="description" content="${config.blogDescription}" />
+<title>${config.blogName}</title>
     </head>
     <div style="">
         <div style="display: flex; position: absolute; top: 0; left: 0">
@@ -59,12 +62,30 @@ body {
 </div>
     </div>
 
-<div class="typewriter" style="position: absolute; top: 30vh; width:100%; text-align: center; line-height: 2em">
-<h1 style="margin-bottom: -5px" >Tanner Byers</h1>
-<img height="80px" width="120px" src="./assets/code.png"/>
-<h2 style="font-weight: lighter">Developer / Problem Solver</h2>
+    <div class="posts">
+    ${posts
+    .map(
+      post => `<div class="post">
+        <h3><a href="./${post.path}">${post.attributes.title
+        }</a></h3>
+            <small>${(post.attributes.date).toDateString()}</small>
+            <p>${post.attributes.description}</p>
+        </div>`
+    )
+    .join("")}
 </div>
+
 <div style="position: absolute; bottom: 1rem; width: 100%; height: 2.5rem; text-align: center; font-family: Merriweather,Georgia,serif;">
     <i> <p>If code won't fix it, why am I here?</p></i>
 </div>
 </html>
+`;
+
+const addBlogPage = (posts) => {
+  fs.writeFile(`${config.dev.outdir}/blog.html`, blog(posts), (e) => {
+    if (e) throw e;
+    console.log(`blogpage.html was created successfully`);
+  });
+};
+
+module.exports = addBlogPage;
